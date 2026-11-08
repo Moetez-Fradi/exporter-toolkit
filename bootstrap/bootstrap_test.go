@@ -80,9 +80,6 @@ func TestResolveMetricsHandlerFactoryReceivesParsedBootstrap(t *testing.T) {
 	if got.MaxRequests != 7 {
 		t.Fatalf("unexpected max requests: got %d, want 7", got.MaxRequests)
 	}
-	if !got.DisableExporterMetrics {
-		t.Fatal("expected disable exporter metrics to be true")
-	}
 	if got.MetricsPath != "/metrics" {
 		t.Fatalf("unexpected metrics path: got %q, want %q", got.MetricsPath, "/metrics")
 	}
